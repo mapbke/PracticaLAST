@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Kurotsuki — интерьерный тюнинг в эстетике JDM. Кожа, Alcantara и карбон. Соберите свой салон и получите ориентировочный расчёт.">
+  <meta name="csrf-token" content="{{ csrf_token() }}">
+  <meta property="og:title" content="Kurotsuki — Interior is character."><meta property="og:description" content="Ваш характер. Ваш салон. Ателье интерьерного тюнинга в эстетике JDM.">
+  <meta property="og:type" content="website"><meta property="og:image" content="{{ config.PUBLIC_URL }}/static/img/hero.webp">
+  <meta property="og:url" content="{{ canonical|default(config.PUBLIC_URL) }}">
+  <link rel="canonical" href="{{ canonical|default(config.PUBLIC_URL) }}">
+  <title>{% block title %}Kurotsuki — интерьер с характером{% endblock %}</title>
+  <link rel="icon" href="{{ url_for('static', filename='icons/moon.svg') }}" type="image/svg+xml">
+  <script src="{{ url_for('static', filename='js/theme.js') }}"></script>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <script src="{{ url_for('static', filename='js/main.js') }}" defer></script>
+</head>
+<body>{% block body %}{% endblock %}</body>
+</html>
